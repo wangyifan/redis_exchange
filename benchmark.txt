@@ -1,0 +1,8 @@
+添加100万个订单
+redis-benchmark -q -r 1000000 -n 1000000 zadd redis_test __rand_int__ __rand_int__
+
+查询100万次深度
+redis-benchmark -q -r 1000000 -n 1000000 zrange redis_test __rand_int__ __rand_int__
+
+删除100万个订单
+redis-benchmark -q -r 1000000 -n 1000000 zrem redis_test __rand_int__
